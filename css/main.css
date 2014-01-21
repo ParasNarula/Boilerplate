@@ -1,0 +1,388 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 1200px) {
+    /* Style adjustments for viewports that meet the condition */
+	section.container {width:94% !important;}
+	nav.toplinks ul li a { font-size:14px !important;}
+	nav.toplinks ul li {padding:0 8px !important;}
+}
+@media only screen and (max-width: 979px) {
+	section.container {width:90% !important;}
+	nav.toplinks ul li a , nav.footerlinks ul li a, footer#footer .copyright{ font-size:11px !important;}
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+a {text-decoration:none; border:0;outline: 0;}
+.clear{ clear:both;}
+ul, li, ol { list-style:none;}
+
+header#header {float:left; width:100%; background:#000000; border-bottom:4px solid #80a1b6; padding:14px 0;}
+section.header_inner {margin:0 auto; width:95%;}
+.header_right {float:right; width:373px; height:21px; margin:4px 0 0 0;}
+.logo {float:left; width:251px; height:27px;}
+nav.toplinks {width:96%; float:left; margin:22px 2% 0;}
+nav.toplinks ul {float:left; margin:0; padding:0;}
+nav.toplinks ul li{float:left; border-right:1px solid #000; padding:0 12px;}
+nav.toplinks ul li:last-child {border:none;}
+nav.toplinks ul li a{float:left; color:#000000; font:18px/14px arial;}
+nav.toplinks ul li a:hover{color:#3C5D72;}
+
+section.container {width:95%; float:left; margin:22px 2.5% 0;}
+section.container article.left_articles {float:left; width:70%;}
+section.container article.left_articles .article {float:left; border-bottom:1px solid #adadad; padding:20px 0;}
+section.container article.left_articles .article.last{border:none;}
+section.container article.left_articles .article h1 {float:left; font:bold 18px arial; color:#000; width:100%; margin:0;}
+section.container article.left_articles .article p {float:left; color:#656565; font:14px arial; margin:10px 0;}
+section.container aside.right_sidebar {float:right; width:25%;}
+section.container aside.right_sidebar article.quick_links {float:left; width:100%;}
+section.container aside.right_sidebar article.quick_links h1 {float:left; width:100%; margin:0;}
+section.container aside.right_sidebar article.quick_links h1 span{float:left; background:url('../images/iconsheet.png') -1px -1px no-repeat; width:28px; height:32px; margin:0 18px 0 8px;}
+section.container aside.right_sidebar article.quick_links h1 font{float:left; font:bold 18px arial; color:#7f7f7f;}
+section.container aside.right_sidebar .links_con {float:left; border:1px solid #b0b0b0; margin:12px 0 30px 0; padding:10px; max-width:250px;}
+section.container aside.right_sidebar .links_con ul{float:left; margin:0; padding:0;}
+section.container aside.right_sidebar .links_con ul li{float:left; width:100%; margin:8px 0; background:url('../images/iconsheet.png') -80px 2px no-repeat;}
+section.container aside.right_sidebar .links_con ul li a{float:left; font:14px arial; color:#000; padding:0 0 0 32px;}
+section.container aside.right_sidebar .links_con ul li a:hover {color:#3c5d72;}
+
+section.container aside.right_sidebar article.news_alerts {float:left; width:100%;}
+section.container aside.right_sidebar article.news_alerts h1 {float:left; width:100%; margin:0;}
+section.container aside.right_sidebar article.news_alerts h1 span{float:left; background:url('../images/iconsheet.png') -34px -1px no-repeat; width:29px; height:22px; margin:0 17px 0 8px;}
+section.container aside.right_sidebar article.news_alerts h1 font{float:left; font:bold 18px arial; color:#7f7f7f;}
+section.container aside.right_sidebar .notifications {float:left; border:1px solid #b0b0b0; margin:12px 0 30px 0; padding:0 10px; max-width:250px;}
+section.container aside.right_sidebar .notifications ul{float:left; margin:0; padding:0;}
+section.container aside.right_sidebar .notifications ul li{float:left; width:100%; padding:10px 0; background:url('../images/iconsheet.png') -80px 2px no-repeat; border-bottom:2px solid #b2b2b2;}
+section.container aside.right_sidebar .notifications ul li:last-child {border:none;}
+section.container aside.right_sidebar .notifications ul li a{float:left; font:14px arial; color:#000; padding:0 0 0 45px;}
+section.container aside.right_sidebar .notifications ul li a:hover {color:#3c5d72;}
+section.container aside.right_sidebar .notifications ul li.alert {background-position: -75px -26px;}
+section.container aside.right_sidebar .notifications ul li.news {background-position: -75px -74px;}
+
+section.container aside.right_sidebar article.contacts {float:left; width:100%;}
+section.container aside.right_sidebar article.contacts h1 {float:left; width:100%; margin:0;}
+section.container aside.right_sidebar article.contacts h1 span{float:left; background:url('../images/iconsheet.png') -1px -58px no-repeat; width:32px; height:22px; margin:0 14px 0 8px;}
+section.container aside.right_sidebar article.contacts h1 font{float:left; font:bold 18px arial; color:#7f7f7f;}
+section.container aside.right_sidebar .info {float:left; border:1px solid #b0b0b0; margin:12px 0 30px 0; padding:0 10px; max-width:250px;}
+section.container aside.right_sidebar .info ul{float:left; margin:0; padding:0;}
+section.container aside.right_sidebar .info ul li{float:left; width:100%; padding:10px 0; border-bottom:1px dashed #b2b2b2;}
+section.container aside.right_sidebar .info ul li:last-child {border:none;}
+section.container aside.right_sidebar .info ul li h1{float:left; font:14px arial; color:#000; padding:0 0 0 45px;}
+section.container aside.right_sidebar .info ul li span{float:left; font:14px arial; color:#000; padding:10px 0 2px 10px;}
+section.container aside.right_sidebar .info ul li p{float:left; font:14px/20px arial; color:#000; padding:10px 0 0px 10px; margin:0;}
+section.container aside.right_sidebar .info ul li.loc {background:url('../images/loc.png') 10px 10px no-repeat;}
+section.container aside.right_sidebar .info ul li.contact {background:url('../images/contact.png') 10px 10px no-repeat;}
+section.container aside.right_sidebar .info ul li.contact p {padding-top:3px; width:100%;}
+
+footer#footer {width:95%; float:left; margin:20px 2.5% 20px 2.5%;}
+footer#footer .copyright {float:left; color:#7f7f7f; font:14px arial;}
+nav.footerlinks {float:right;}
+nav.footerlinks ul {float:left; margin:0; padding:0;}
+nav.footerlinks ul li{float:left; border-right:1px solid #7f7f7f; padding:0 8px;}
+nav.footerlinks ul li:last-child {border:none;}
+nav.footerlinks ul li a{float:left; color:#7f7f7f; font:14px/12px arial;}
+nav.footerlinks ul li a:hover{color:#3C5D72;}
+
+.select_panel{float:left; margin: 22px 2.5% 0; position:relative; background:#000; width:200px;}
+.select_panel ul{list-style-type:none; float:left; padding:0; margin:0;}
+.select_panel ul li{ list-style-type:none; float:left; color: #6f7477;}
+.select_panel ul li a{background:url(../images/downarrow.png) 92% center no-repeat; width:172px; text-decoration:none; padding:6px 14px; float:left; color: #fff; font:18px arial;}
+.select_panel ul li ul { position: absolute; left:0px; display: none; z-index: 999; top:34px; background:rgba(32,36,64,0.95); width:100%;}
+.select_panel ul li ul li{ float:left; list-style-type:none; width:100%;}
+.select_panel ul li ul li a{color:#c4c8ca; font: bold 14px Arial, Helvetica, sans-serif; float:left; padding:10px 0px 10px 14px; background:none; width:93%; list-style-type:none;}
+.select_panel ul li ul li a:hover{background:#3C5D72; color:#fff;}
